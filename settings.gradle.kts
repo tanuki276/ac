@@ -5,14 +5,15 @@ pluginManagement {
         gradlePluginPortal()
     }
     plugins {
-        id("com.android.application") version "8.1.2"
-        id("com.android.library") version "8.1.2"
-        id("org.jetbrains.kotlin.android") version "1.9.10"
-        id("dagger.hilt.android.plugin") version "2.48"
-        id("com.google.gms.google-services") version "4.4.0"
-        id("com.google.firebase.crashlytics") version "2.9.9"
+        id("com.android.application") version "8.1.2" apply false
+        id("com.android.library") version "8.1.2" apply false
+        id("org.jetbrains.kotlin.android") version "1.9.10" apply false
+        id("dagger.hilt.android.plugin") version "2.48" apply false
+        id("com.google.gms.google-services") version "4.4.0" apply false
+        id("com.google.firebase.crashlytics") version "2.9.9" apply false
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -44,5 +45,6 @@ dependencyResolutionManagement {
         }
     }
 }
+
 rootProject.name = "NyankoWars"
 include(":app")
