@@ -46,4 +46,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "NyankoWars"
 include(":app")
-EOF
