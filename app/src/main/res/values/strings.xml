@@ -1,0 +1,206 @@
+<resources>
+    <!-- アプリ基本情報 -->
+    <string name="app_name">ねこせんそう</string>
+    <string name="app_full_name">ねこせんそう</string>
+    <string name="app_version">1.0.0</string>
+    <string name="app_package_name">com.nyankowars</string>
+    <string name="app_author">Nyanko Team</string>
+    <string name="app_description">ねこせんそうをしよう</string>
+    
+    <!-- 共通 -->
+    <string name="ok">OK</string>
+    <string name="cancel">キャンセル</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="save">保存</string>
+    <string name="delete">削除</string>
+    <string name="edit">編集</string>
+    <string name="close">閉じる</string>
+    <string name="back">戻る</string>
+    <string name="next">次へ</string>
+    <string name="skip">スキップ</string>
+    <string name="confirm">確認</string>
+    <string name="loading">読み込み中…</string>
+    <string name="error">エラー</string>
+    <string name="success">成功</string>
+    <string name="warning">警告</string>
+    <string name="retry">再試行</string>
+    <string name="refresh">更新</string>
+    <string name="search">検索</string>
+    <string name="filter">フィルター</string>
+    <string name="sort">並び替え</string>
+    
+    <!-- 認証関連 -->
+    <string name="login">ログイン</string>
+    <string name="logout">ログアウト</string>
+    <string name="register">新規登録</string>
+    <string name="email">メールアドレス</string>
+    <string name="password">パスワード</string>
+    <string name="username">ユーザー名</string>
+    <string name="confirm_password">パスワード（確認）</string>
+    <string name="forgot_password">パスワードを忘れた</string>
+    <string name="sign_in">サインイン</string>
+    <string name="sign_up">サインアップ</string>
+    
+    <!-- ゲーム用語 -->
+    <string name="nyanko">にゃんこ</string>
+    <string name="nyanko_point">にゃんこポイント</string>
+    <string name="gems">ジェム</string>
+    <string name="energy">エネルギー</string>
+    <string name="stamina">スタミナ</string>
+    <string name="experience">経験値</string>
+    <string name="level">レベル</string>
+    <string name="rank">ランク</string>
+    <string name="power">戦闘力</string>
+    
+    <!-- レアリティ -->
+    <string name="rarity_normal">ノーマル</string>
+    <string name="rarity_rare">レア</string>
+    <string name="rarity_epic">エピック</string>
+    <string name="rarity_legendary">レジェンド</string>
+    <string name="rarity_mythical">神話</string>
+    
+    <!-- 属性 -->
+    <string name="element_none">なし</string>
+    <string name="element_fire">炎</string>
+    <string name="element_water">水</string>
+    <string name="element_earth">地</string>
+    <string name="element_light">光</string>
+    <string name="element_dark">闇</string>
+    <string name="element_wind">風</string>
+    <string name="element_thunder">雷</string>
+    
+    <!-- タイプ -->
+    <string name="type_warrior">戦士</string>
+    <string name="type_mage">魔法使い</string>
+    <string name="type_tank">防御型</string>
+    <string name="type_assassin">暗殺者</string>
+    <string name="type_healer">回復型</string>
+    <string name="type_support">サポート</string>
+    <string name="type_ranged">遠距離</string>
+    
+    <!-- 画面タイトル -->
+    <string name="title_home">ホーム</string>
+    <string name="title_cats">にゃんこ図鑑</string>
+    <string name="title_battle">バトル</string>
+    <string name="title_gacha">ガチャ</string>
+    <string name="title_shop">ショップ</string>
+    <string name="title_settings">設定</string>
+    <string name="title_profile">プロフィール</string>
+    <string name="title_inventory">アイテム</string>
+    <string name="title_quests">クエスト</string>
+    <string name="title_achievements">実績</string>
+    <string name="title_leaderboard">ランキング</string>
+    <string name="title_friends">フレンド</string>
+    <string name="title_events">イベント</string>
+    
+    <!-- アクション -->
+    <string name="action_attack">攻撃</string>
+    <string name="action_defend">防御</string>
+    <string name="action_skill">スキル</string>
+    <string name="action_item">アイテム</string>
+    <string name="action_escape">逃げる</string>
+    <string name="action_upgrade">強化</string>
+    <string name="action_evolve">進化</string>
+    <string name="action_sell">売却</string>
+    <string name="action_use">使用</string>
+    <string name="action_buy">購入</string>
+    <string name="action_sell_all">全売却</string>
+    <string name="action_select_all">全選択</string>
+    
+    <!-- ステータス -->
+    <string name="status_hp">HP</string>
+    <string name="status_mp">MP</string>
+    <string name="status_attack">攻撃力</string>
+    <string name="status_defense">防御力</string>
+    <string name="status_speed">速度</string>
+    <string name="status_critical">クリティカル率</string>
+    <string name="status_critical_damage">クリティカルダメージ</string>
+    <string name="status_accuracy">命中率</string>
+    <string name="status_dodge">回避率</string>
+    
+    <!-- メッセージ -->
+    <string name="msg_welcome">にゃんこ大戦争へようこそ！</string>
+    <string name="msg_login_success">ログインに成功しました</string>
+    <string name="msg_register_success">登録に成功しました</string>
+    <string name="msg_save_success">保存しました</string>
+    <string name="msg_buy_success">購入しました</string>
+    <string name="msg_upgrade_success">強化しました</string>
+    <string name="msg_evolve_success">進化しました</string>
+    <string name="msg_gacha_success">にゃんこをゲットしました！</string>
+    <string name="msg_battle_win">勝利！</string>
+    <string name="msg_battle_lose">敗北…</string>
+    <string name="msg_energy_full">エネルギーが全回復しました</string>
+    <string name="msg_level_up">レベルアップ！</string>
+    
+    <!-- エラーメッセージ -->
+    <string name="error_network">ネットワーク接続エラー</string>
+    <string name="error_server">サーバーエラー</string>
+    <string name="error_login">ログインに失敗しました</string>
+    <string name="error_register">登録に失敗しました</string>
+    <string name="error_invalid_email">無効なメールアドレスです</string>
+    <string name="error_password_length">パスワードは6文字以上必要です</string>
+    <string name="error_password_mismatch">パスワードが一致しません</string>
+    <string name="error_username_taken">このユーザー名は既に使用されています</string>
+    <string name="error_email_taken">このメールアドレスは既に登録されています</string>
+    <string name="error_not_enough_points">にゃんこポイントが足りません</string>
+    <string name="error_not_enough_energy">エネルギーが足りません</string>
+    <string name="error_not_enough_gems">ジェムが足りません</string>
+    <string name="error_cat_full">にゃんこが最大数に達しました</string>
+    <string name="error_inventory_full">アイテムが最大数に達しました</string>
+    <string name="error_battle_not_found">バトルが見つかりません</string>
+    <string name="error_cat_not_found">にゃんこが見つかりません</string>
+    
+    <!-- 設定項目 -->
+    <string name="settings_sound">サウンド</string>
+    <string name="settings_music">BGM</string>
+    <string name="settings_vibration">振動</string>
+    <string name="settings_notifications">通知</string>
+    <string name="settings_language">言語</string>
+    <string name="settings_graphics">画質</string>
+    <string name="settings_data">データ管理</string>
+    <string name="settings_account">アカウント</string>
+    <string name="settings_privacy">プライバシー</string>
+    <string name="settings_terms">利用規約</string>
+    <string name="settings_policy">プライバシーポリシー</string>
+    <string name="settings_contact">お問い合わせ</string>
+    <string name="settings_version">バージョン情報</string>
+    
+    <!-- クエスト -->
+    <string name="quest_daily">デイリー</string>
+    <string name="quest_weekly">ウィークリー</string>
+    <string name="quest_monthly">マンスリー</string>
+    <string name="quest_event">イベント</string>
+    <string name="quest_main">メイン</string>
+    <string name="quest_side">サブ</string>
+    
+    <!-- 時間 -->
+    <string name="time_seconds">秒前</string>
+    <string name="time_minutes">分前</string>
+    <string name="time_hours">時間前</string>
+    <string name="time_days">日前</string>
+    <string name="time_now">たった今</string>
+    
+    <!-- 空状態メッセージ -->
+    <string name="empty_cats">にゃんこがいません\nガチャでにゃんこをゲットしよう！</string>
+    <string name="empty_items">アイテムがありません</string>
+    <string name="empty_quests">クエストがありません</string>
+    <string name="empty_friends">フレンドがいません</string>
+    <string name="empty_history">履歴がありません</string>
+    
+    <!-- デバッグ用 -->
+    <string name="debug_mode">デバッグモード</string>
+    <string name="server_url">サーバーURL</string>
+    <string name="api_key">APIキー</string>
+    <string name="user_id">ユーザーID</string>
+    <string name="session_id">セッションID</string>
+    
+    <!-- その他 -->
+    <string name="coming_soon">近日公開</string>
+    <string name="under_construction">準備中</string>
+    <string name="no_data">データがありません</string>
+    <string name="tap_to_retry">タップして再試行</string>
+    <string name="pull_to_refresh">引っ張って更新</string>
+    <string name="load_more">もっと読み込む</string>
+    <string name="end_of_list">最後まで読み込みました</string>
+</resources>
