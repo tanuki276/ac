@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- プライマリカラー -->
+    <color name="purple_primary">#6200EE</color>
+    <color name="purple_dark">#3700B3</color>
+    <color name="purple_light">#BB86FC</color>
+    
+    <!-- セカンダリカラー -->
+    <color name="pink_primary">#FF6B6B</color>
+    <color name="pink_dark">#FF5252</color>
+    <color name="pink_light">#FF8A80</color>
+    
+    <!-- その他 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_dark">#212121</color>
+    
+    <!-- レアリティカラー -->
+    <color name="rarity_normal">#808080</color>
+    <color name="rarity_rare">#1E90FF</color>
+    <color name="rarity_epic">#FF4500</color>
+    <color name="rarity_legendary">#FFD700</color>
+    <color name="rarity_mythical">#8A2BE2</color>
+    
+    <!-- 要素カラー -->
+    <color name="element_fire">#FF5722</color>
+    <color name="element_water">#2196F3</color>
+    <color name="element_earth">#795548</color>
+    <color name="element_light">#FFEB3B</color>
+    <color name="element_dark">#607D8B</color>
+</resources>
