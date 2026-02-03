@@ -1,8 +1,6 @@
-cat <<EOF > app/build.gradle.kts
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    // settingsで定義したバージョンが自動適用されます
+    id("com.android.application") version "8.1.2"
+    id("org.jetbrains.kotlin.android") version "1.9.10"
 }
 
 android {
@@ -14,7 +12,8 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -22,14 +21,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
 
 dependencies {
-    // settingsで定義したカタログ(libs)を使う
-    implementation(libs.findLibrary("androidx-core").get())
-    implementation(libs.findLibrary("androidx-lifecycle").get())
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.10.0")
 }
-EOF
