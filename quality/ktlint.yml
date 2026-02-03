@@ -1,0 +1,58 @@
+disabled_rules:
+  - import-ordering
+  - filename
+
+editorconfig:
+  indent_size: 2
+  indent_style: space
+  max_line_length: 100
+  insert_final_newline: true
+  trim_trailing_whitespace: true
+
+code_style: ktlint_official
+
+experimental:
+  rules:
+    annotation-spacing: false
+    argument-list-wrapping: true
+    double-colon-spacing: true
+    function-return-type-spacing: true
+    kdoc-wrapping: true
+    no-line-break-before-assignment: true
+    no-unused-imports: true
+    parameter-list-wrapping: true
+    spacing-between-declarations-with-annotations: true
+    trailing-comma-on-call-site: true
+    trailing-comma-on-declaration-site: true
+
+rules:
+  filename:
+    active: true
+  final-newline:
+    active: true
+  max-line-length:
+    active: true
+    max_line_length: 100
+    exclude_pattern: "(import|package)"
+  no-blank-line-before-rbrace:
+    active: true
+  no-consecutive-blank-lines:
+    active: true
+  no-empty-block:
+    active: true
+  no-multi-spaces:
+    active: true
+  no-semi:
+    active: true
+  no-trailing-spaces:
+    active: true
+  no-unused-imports:
+    active: true
+  no-wildcard-imports:
+    active: true
+  parameter-list-wrapping:
+    active: true
+  spacing:
+    active: true
+  string-template:
+    active: true
