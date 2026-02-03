@@ -1,32 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- プライマリカラー -->
-    <color name="purple_primary">#6200EE</color>
-    <color name="purple_dark">#3700B3</color>
-    <color name="purple_light">#BB86FC</color>
+    <!-- アプリ基本色 -->
+    <color name="nyanko_primary">#FF6B6B</color>
+    <color name="nyanko_primary_dark">#D84343</color>
+    <color name="nyanko_primary_light">#FF9E9E</color>
+    <color name="nyanko_secondary">#4ECDC4</color>
+    <color name="nyanko_secondary_dark">#2AA9A1</color>
+    <color name="nyanko_secondary_light">#7DFFF7</color>
+    <color name="nyanko_accent">#FFD166</color>
     
-    <!-- セカンダリカラー -->
-    <color name="pink_primary">#FF6B6B</color>
-    <color name="pink_dark">#FF5252</color>
-    <color name="pink_light">#FF8A80</color>
+    <!-- テーマ色 -->
+    <color name="colorPrimary">@color/nyanko_primary</color>
+    <color name="colorPrimaryDark">@color/nyanko_primary_dark</color>
+    <color name="colorAccent">@color/nyanko_accent</color>
+    <color name="colorSecondary">@color/nyanko_secondary</color>
     
-    <!-- その他 -->
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
-    <color name="gray_light">#F5F5F5</color>
-    <color name="gray_dark">#212121</color>
+    <!-- 背景色 -->
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F5F5F5</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="background_dialog">#FFFFFF</color>
+    <color name="background_overlay">#80000000</color>
     
-    <!-- レアリティカラー -->
+    <!-- テキスト色 -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="text_disabled">#9E9E9E</color>
+    <color name="text_inverse">#FFFFFF</color>
+    <color name="text_link">#2196F3</color>
+    <color name="text_error">#F44336</color>
+    <color name="text_success">#4CAF50</color>
+    <color name="text_warning">#FF9800</color>
+    
+    <!-- 罫線色 -->
+    <color name="border_light">#E0E0E0</color>
+    <color name="border_dark">#BDBDBD</color>
+    <color name="divider">#EEEEEE</color>
+    
+    <!-- 状態色 -->
+    <color name="state_pressed">#1F000000</color>
+    <color name="state_focused">#1FFFFFFF</color>
+    <color name="state_selected">#33000000</color>
+    <color name="state_activated">#33000000</color>
+    <color name="state_hovered">#0A000000</color>
+    <color name="state_checked">@color/nyanko_primary</color>
+    
+    <!-- レアリティ色 -->
     <color name="rarity_normal">#808080</color>
     <color name="rarity_rare">#1E90FF</color>
     <color name="rarity_epic">#FF4500</color>
     <color name="rarity_legendary">#FFD700</color>
     <color name="rarity_mythical">#8A2BE2</color>
     
-    <!-- 要素カラー -->
+    <!-- 要素色 -->
     <color name="element_fire">#FF5722</color>
     <color name="element_water">#2196F3</color>
     <color name="element_earth">#795548</color>
     <color name="element_light">#FFEB3B</color>
     <color name="element_dark">#607D8B</color>
+    <color name="element_wind">#4CAF50</color>
+    <color name="element_thunder">#9C27B0</color>
+    
+    <!-- ゲーム資源色 -->
+    <color name="resource_nyanko_point">#FFD700</color>
+    <color name="resource_gem">#00BCD4</color>
+    <color name="resource_energy">#4CAF50</color>
+    <color name="resource_stamina">#FF9800</color>
+    <color name="resource_exp">#9C27B0</color>
+    
+    <!-- バトル色 -->
+    <color name="battle_hp">#F44336</color>
+    <color name="battle_mp">#2196F3</color>
+    <color name="battle_attack">#FF9800</color>
+    <color name="battle_defense">#3F51B5</color>
+    <color name="battle_speed">#4CAF50</color>
+    
+    <!-- 通知色 -->
+    <color name="notification_info">#2196F3</color>
+    <color name="notification_success">#4CAF50</color>
+    <color name="notification_warning">#FF9800</color>
+    <color name="notification_error">#F44336</color>
+    
+    <!-- グラデーション -->
+    <color name="gradient_start">#FF6B6B</color>
+    <color name="gradient_end">#4ECDC4</color>
+    <color name="gradient_dark_start">#D84343</color>
+    <color name="gradient_dark_end">#2AA9A1</color>
+    
+    <!-- シャドウ -->
+    <color name="shadow_light">#1A000000</color>
+    <color name="shadow_medium">#33000000</color>
+    <color name="shadow_dark">#4D000000</color>
+    
+    <!-- 透明色 -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_black_50">#80000000</color>
+    <color name="transparent_white_50">#80FFFFFF</color>
+    <color name="transparent_primary_20">#33FF6B6B</color>
+    
+    <!-- システム色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
 </resources>
