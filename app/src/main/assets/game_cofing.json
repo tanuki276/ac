@@ -1,0 +1,140 @@
+{
+  "game": {
+    "name": "ねこせんそう",
+    "version": "1.0.0",
+    "package_name": "com.nyankowars",
+    "developer": "Nyanko Team",
+    "website": "https://nyankowars.com",
+    "support_email": "support@nyankowars.com",
+    "privacy_policy": "https://nyankowars.com/privacy",
+    "terms_of_service": "https://nyankowars.com/terms"
+  },
+  "gameplay": {
+    "max_energy": 100,
+    "energy_regen_minutes": 5,
+    "max_stamina": 50,
+    "stamina_regen_minutes": 3,
+    "max_cats": 200,
+    "max_items": 500,
+    "team_size": 5,
+    "max_cat_level": 100,
+    "base_exp_multiplier": 100,
+    "gacha_cost": 100,
+    "daily_login_rewards": 7,
+    "max_friends": 50,
+    "chat_cooldown_seconds": 5
+  },
+  "battle": {
+    "max_rounds": 20,
+    "timeout_seconds": 300,
+    "energy_cost": 10,
+    "exp_multiplier": 10,
+    "point_multiplier": 5,
+    "critical_rate_base": 5,
+    "critical_damage_base": 150,
+    "dodge_rate_base": 5,
+    "accuracy_base": 95,
+    "element_advantage": 1.5,
+    "element_disadvantage": 0.5
+  },
+  "gacha": {
+    "rates": {
+      "normal": 60,
+      "rare": 25,
+      "epic": 10,
+      "legendary": 4,
+      "mythical": 1
+    },
+    "pity_system": {
+      "rare_guarantee": 10,
+      "epic_guarantee": 50,
+      "legendary_guarantee": 100
+    },
+    "types": ["normal", "premium", "event"],
+    "costs": {
+      "normal": 100,
+      "premium": 300,
+      "event": 200
+    }
+  },
+  "economy": {
+    "currency": {
+      "nyanko_point": {
+        "name": "にゃんこポイント",
+        "symbol": "NP",
+        "decimal_places": 0
+      },
+      "gem": {
+        "name": "ジェム",
+        "symbol": "💎",
+        "decimal_places": 0
+      }
+    },
+    "exchange_rates": {
+      "gem_to_point": 100,
+      "point_to_gem": 0.01
+    },
+    "shop_items": {
+      "energy_potion": {
+        "price": 50,
+        "restore_amount": 50,
+        "daily_limit": 5
+      },
+      "stamina_potion": {
+        "price": 30,
+        "restore_amount": 30,
+        "daily_limit": 3
+      },
+      "gacha_ticket": {
+        "price": 1000,
+        "daily_limit": 1
+      }
+    }
+  },
+  "social": {
+    "max_friends": 50,
+    "max_guild_members": 100,
+    "chat_message_limit": 200,
+    "report_cooldown_hours": 24,
+    "friend_request_expiry_days": 7,
+    "guild_creation_cost": 10000
+  },
+  "events": {
+    "daily_reset_hour": 4,
+    "weekly_reset_day": 1,
+    "monthly_reset_day": 1,
+    "season_duration_days": 90,
+    "event_check_interval_minutes": 5
+  },
+  "performance": {
+    "max_battle_logs": 100,
+    "max_chat_messages": 500,
+    "auto_save_interval_minutes": 5,
+    "cache_duration_minutes": 60,
+    "log_retention_days": 30
+  },
+  "analytics": {
+    "enabled": true,
+    "sample_rate": 1.0,
+    "flush_interval_seconds": 60,
+    "max_queue_size": 1000,
+    "tracked_events": [
+      "login",
+      "logout",
+      "battle_start",
+      "battle_end",
+      "gacha",
+      "purchase",
+      "level_up"
+    ]
+  },
+  "debug": {
+    "enabled": true,
+    "log_level": "debug",
+    "show_fps": false,
+    "skip_tutorial": false,
+    "unlock_all_cats": false,
+    "infinite_resources": false,
+    "fast_battle": false
+  }
+}
