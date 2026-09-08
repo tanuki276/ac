@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.NyankoWars" parent="android:style/Theme.Material.DayNight.NoActionBar">
-        <item name="android:windowActionModeOverlay">true</item>
-        <item name="android:colorAccent">@color/nyanko_primary</item>
+    <style name="Theme.NyankoWars" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/nyanko_primary</item>
+        <item name="colorPrimaryDark">@color/nyanko_primary</item>
+        <item name="colorAccent">@color/nyanko_secondary</item>
         <item name="android:statusBarColor">@color/nyanko_primary</item>
         <item name="android:navigationBarColor">@android:color/white</item>
-        <item name="android:windowLightStatusBar">false</item>
     </style>
 
-    <style name="Theme.NyankoWars.Dark" parent="android:style/Theme.Material.NoActionBar">
-        <item name="android:windowActionModeOverlay">true</item>
-        <item name="android:colorAccent">@color/nyanko_primary</item>
+    <style name="Theme.NyankoWars.Dark" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/nyanko_primary</item>
+        <item name="colorPrimaryDark">@color/nyanko_primary</item>
+        <item name="colorAccent">@color/nyanko_secondary</item>
         <item name="android:statusBarColor">@android:color/black</item>
         <item name="android:navigationBarColor">@android:color/black</item>
-        <item name="android:windowLightStatusBar">false</item>
     </style>
 </resources>
