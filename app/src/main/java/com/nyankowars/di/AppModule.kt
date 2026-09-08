@@ -49,7 +49,8 @@ object AppModule {
     @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://192.168.1.100:8080/api/") // サーバーURLに変更
+            // ab/server: port 3000, API prefix /api/
+            .baseUrl("http://127.0.0.1:3000/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
@@ -97,7 +98,6 @@ object AppModule {
         return PlayerRepository(api, database, preferences)
     }
     
-    // ドメインリポジトリインターフェースも同じ実装を使用
     @Provides
     @Singleton
     fun provideAuthRepositoryDomain(
