@@ -5,8 +5,6 @@ import androidx.room.Room
 import com.nyankowars.data.api.NyankoApi
 import com.nyankowars.data.local.NyankoDatabase
 import com.nyankowars.data.local.PreferencesManager
-import com.nyankowars.data.repository.*
-import com.nyankowars.domain.repository.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,14 +20,13 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-    
     @Provides
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
-        
+
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .connectTimeout(30, TimeUnit.SECONDS)
@@ -37,80 +34,37 @@ object AppModule {
             .writeTimeout(30, TimeUnit.SECONDS)
             .addInterceptor { chain ->
                 val request = chain.request().newBuilder()
-                    .addHeader("Content-Type", "application/json")
                     .addHeader("Accept", "application/json")
                     .build()
                 chain.proceed(request)
             }
             .build()
     }
-    
+
     @Provides
     @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            // ab/server: port 3000, API prefix /api/
-            .baseUrl("http://127.0.0.1:3000/api/")
+            // Android emulator -> host machine. Override this for a physical device/build flavor later.
+            .baseUrl("http://10.0.2.2:3000/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
     }
-    
+
     @Provides
     @Singleton
-    fun provideNyankoApi(retrofit: Retrofit): NyankoApi {
-        return retrofit.create(NyankoApi::class.java)
-    }
-    
+    fun provideNyankoApi(retrofit: Retrofit): NyankoApi = retrofit.create(NyankoApi::class.java)
+
     @Provides
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): NyankoDatabase {
-        return Room.databaseBuilder(
-            context,
-            NyankoDatabase::class.java,
-            "nyanko_database"
-        ).fallbackToDestructiveMigration()
+        return Room.databaseBuilder(context, NyankoDatabase::class.java, "nyanko_database")
+            .fallbackToDestructiveMigration()
             .build()
     }
-    
+
     @Provides
     @Singleton
-    fun providePreferencesManager(@ApplicationContext context: Context): PreferencesManager {
-        return PreferencesManager(context)
-    }
-    
-    @Provides
-    @Singleton
-    fun provideAuthRepository(
-        api: NyankoApi,
-        preferences: PreferencesManager
-    ): AuthRepository {
-        return AuthRepository(api, preferences)
-    }
-    
-    @Provides
-    @Singleton
-    fun providePlayerRepository(
-        api: NyankoApi,
-        database: NyankoDatabase,
-        preferences: PreferencesManager
-    ): PlayerRepository {
-        return PlayerRepository(api, database, preferences)
-    }
-    
-    @Provides
-    @Singleton
-    fun provideAuthRepositoryDomain(
-        authRepository: AuthRepository
-    ): com.nyankowars.domain.repository.AuthRepository {
-        return authRepository
-    }
-    
-    @Provides
-    @Singleton
-    fun providePlayerRepositoryDomain(
-        playerRepository: PlayerRepository
-    ): com.nyankowars.domain.repository.PlayerRepository {
-        return playerRepository
-    }
+    fun providePreferencesManager(@ApplicationContext context: Context): PreferencesManager = PreferencesManager(context)
 }

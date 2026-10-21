@@ -1,8 +1,12 @@
 package com.nyankowars.data.local
 
+import androidx.room.Dao
 import androidx.room.Database
 import androidx.room.Entity
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.PrimaryKey
+import androidx.room.Query
 import androidx.room.RoomDatabase
 
 @Entity(tableName = "players")
@@ -45,18 +49,34 @@ data class CatEntity(
     val createdAt: Long
 )
 
-class PlayerDao {
-    fun insertOrUpdate(player: PlayerEntity) = Unit
-    fun getPlayer(id: String?): PlayerEntity? = null
-    fun updateNyankoPoints(id: String, points: Int) = Unit
+@Dao
+interface PlayerDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdate(player: PlayerEntity)
+
+    @Query("SELECT * FROM players WHERE id = :id LIMIT 1")
+    suspend fun getPlayer(id: String?): PlayerEntity?
+
+    @Query("UPDATE players SET nyankoPoints = :points WHERE id = :id")
+    suspend fun updateNyankoPoints(id: String, points: Int)
 }
 
-class CatDao {
-    fun insertOrUpdate(cat: CatEntity) = Unit
-    fun insertOrUpdateAll(cats: List<CatEntity>) = Unit
-    fun getTeamCats(playerId: String?): List<CatEntity> = emptyList()
-    fun getAllCats(playerId: String?): List<CatEntity> = emptyList()
-    fun updateTeamPosition(playerId: String, catId: String, position: Int, inTeam: Boolean) = Unit
+@Dao
+interface CatDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdate(cat: CatEntity)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdateAll(cats: List<CatEntity>)
+
+    @Query("SELECT * FROM cats WHERE playerId = :playerId AND isInTeam = 1 ORDER BY teamPosition ASC")
+    suspend fun getTeamCats(playerId: String?): List<CatEntity>
+
+    @Query("SELECT * FROM cats WHERE playerId = :playerId ORDER BY createdAt DESC")
+    suspend fun getAllCats(playerId: String?): List<CatEntity>
+
+    @Query("UPDATE cats SET teamPosition = :position, isInTeam = :inTeam WHERE playerId = :playerId AND id = :catId")
+    suspend fun updateTeamPosition(playerId: String, catId: String, position: Int, inTeam: Boolean)
 }
 
 @Database(
