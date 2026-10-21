@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.weight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
@@ -33,7 +34,10 @@ fun CatCollectionScreen(playerViewModel: PlayerViewModel) {
                 Text(value.message)
                 Button(onClick = playerViewModel::loadCats) { Text("再試行") }
             }
-            is Resource.Success -> LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            is Resource.Success -> LazyColumn(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
                 items(value.data, key = { it.id }) { cat ->
                     CatCard(cat = cat, onClick = {})
                 }
